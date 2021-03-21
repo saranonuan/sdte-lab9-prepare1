@@ -9,7 +9,6 @@ on:
 jobs:
   build-docker:
     name: Build docker image from source
-    needs: check-code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
@@ -28,5 +27,5 @@ jobs:
         with:
           context: src/
           file: src/Dockerfile
-          tags: ECR_URL
+          tags: 398685843002.dkr.ecr.ap-southeast-1.amazonaws.com/lab9_image_repo
           push: true
